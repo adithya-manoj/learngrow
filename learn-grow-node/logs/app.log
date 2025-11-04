@@ -1,0 +1,22 @@
+2025-11-04 17:13:26 [[31merror[39m]: MongoNetworkError: C02C2A1363750000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:916:SSL alert number 80
+
+    at TLSSocket.<anonymous> (/home/adithyamanojv/Documents/learn-grow-node/node_modules/mongodb/lib/cmap/connect.js:286:44)
+    at Object.onceWrapper (node:events:634:26)
+    at TLSSocket.emit (node:events:519:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-11-04 17:13:28 [[31merror[39m]: MongoNetworkError: C0EC53A4F2760000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:916:SSL alert number 80
+
+    at TLSSocket.<anonymous> (/home/adithyamanojv/Documents/learn-grow-node/node_modules/mongodb/lib/cmap/connect.js:286:44)
+    at Object.onceWrapper (node:events:634:26)
+    at TLSSocket.emit (node:events:519:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-11-04 17:21:16 [[32minfo[39m]: MongoDB connected successfully
+2025-11-04 17:21:16 [[32minfo[39m]:  Server running on port 5000
+2025-11-04 17:23:38 [[32minfo[39m]: MongoDB connected successfully
+2025-11-04 17:23:38 [[32minfo[39m]:  Server running on port 5000
+2025-11-04 18:08:22 [[32minfo[39m]: MongoDB connected successfully
+2025-11-04 18:08:22 [[32minfo[39m]:  Server running on port 5000
