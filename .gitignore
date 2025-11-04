@@ -1,0 +1,12 @@
+# Node
+node_modules/
+npm-debug.log*
+.env
+logs/
+dist/
+.vscode/
+.DS_Store
+
+# Build artifacts
+/build
+/.parcel-cache
