@@ -9,10 +9,7 @@ export const connectDB = async () => {
   }
 
   try {
-    await mongoose.connect(MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
+    await mongoose.connect(MONGO_URI)
     logger.info('MongoDB connected successfully')
   } catch (error) {
     logger.error('MongoDB connection error:', error)

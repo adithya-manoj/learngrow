@@ -1,16 +1,29 @@
-import React from 'react'
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar: React.FC = () => {
-  return (
-    <nav className="fixed top-0 left-0 right-0 bg-blue-600 text-white px-6 py-4 flex items-center justify-between">
-      <h1 className="text-2xl font-bold">LEarn Grow</h1>
-      <ul className="flex gap-6">
-        <li><a href="#" className="hover:text-gray-800">Home</a></li>
-        <li><a href="#" className="hover:text-gray-200">About</a></li>
-        <li><a href="#" className="hover:text-gray-200">Contact</a></li>
-      </ul>
-    </nav>
-  )
-}
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
-export default Navbar
+  const handleLogout = () => {
+    logout();
+    navigate("/login", { replace: true });
+  };
+
+  return (
+    <nav className="navbar">
+      <Link to="/" className="navbar-brand">
+        Learn Grow
+      </Link>
+      <div className="navbar-right">
+        <span className="navbar-user">{user?.username}</span>
+        <button type="button" className="navbar-logout" onClick={handleLogout}>
+          Log out
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
