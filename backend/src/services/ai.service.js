@@ -30,7 +30,13 @@ export async function chat(question) {
     if (err.statusCode) throw err
     if (err.response) {
       const status = err.response.status
-      const message = err.response.data?.message ?? err.response.data?.detail ?? err.message
+      const data = err.response.data
+      let message = data?.message ?? data?.detail ?? err.message
+      if (Array.isArray(message)) {
+        message = message.map((d) => d.msg ?? JSON.stringify(d)).join('; ')
+      } else if (message && typeof message === 'object') {
+        message = JSON.stringify(message)
+      }
       throw Object.assign(new Error(message || 'AI service error'), { statusCode: status >= 500 ? 502 : status })
     }
     const code = err.code

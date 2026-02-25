@@ -55,7 +55,7 @@ function TallyApp() {
 
 function SparkApp() {
   return (
-    <div className="app-page app-page-single">
+    <div className="app-page app-page-single bg-red-400">
       <Link to="/" className="app-back">← Back to apps</Link>
       <div className="app-tile-content">
         <h2 className="app-single-title">Spark</h2>
